@@ -1,22 +1,19 @@
-import DesignOne from "./components/Basic/DesignOne";
-import DesignTwo from "./components/Basic/DesignTwo";
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import DesignThree from "./components/Basic/DesignThree";
-import DesignFour from "./components/Basic/DesignFour";
+import React from 'react'
+import Main from './Main'
+import Home from './Home'
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <BrowserRouter>
+    <div>
+      <Router>
         <Switch>
-          <Route exact path = "/" component={DesignOne}/>
-          <Route exact path = "/designtwo" component={DesignTwo}/>
-          <Route exact path = "/designthree" component={DesignThree}/>
-          <Route exact path = "/designfour" component={DesignFour}/>
+              <Route exact path='/' component={Home}></Route>
+              <Route exact path='/main' component={Main}></Route>
         </Switch>
-      </BrowserRouter>
+      </Router>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

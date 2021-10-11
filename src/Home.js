@@ -24,12 +24,12 @@ class DesignOne extends Component {
     render() {
         const { docs } = this.state
         return (
-            <div>
-                Documents
+            <div style={{margin:'10px', fontSize:'20px'}}>
+                {<span style={{color:'black'}}><strong>Documents</strong><hr/></span>}
                 {
                     docs.length?
                     docs.map(docs=> 
-                        <Link to = "/designtwo"><div key={docs.id} onClick={()=>docid=docs._id}>{docs.filename}, {docs._id}</div></Link>
+                        <Link to = "/main" style={{textDecoration:'none'}}><div style={{color:'blue',}} key={docs.id} onClick={()=>docid=docs._id}>{docs.filename}</div></Link>
                     ):null
                 }
             </div>
