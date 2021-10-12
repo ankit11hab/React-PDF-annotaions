@@ -56,7 +56,7 @@ function Main() {
       scrollToHighlightFromHash,
       false
     );
-    axios.get(`https://cors-anywhere.herokuapp.com/https://menu.classforma.com/get_doc/${docid}/`)
+    axios.get(`https://menu.classforma.com/get_doc/${docid}/`)
         .then(response => {
             console.log(response.data)
             setUrl(`data:application/pdf;base64,${response.data.contents}`)
